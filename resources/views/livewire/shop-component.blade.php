@@ -28,117 +28,20 @@
             <div class="row">
 
                 <ul class="product-list grid-products equal-container">
-
+                   @foreach ($products as $product)
                     <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/miss-dior-blooming-bouquet-apa-de-toaleta-femei-30-ml_24364_1_1631086669.jpg') }}" alt="T-Shirt Raw Hem Organic Boro Constrast Denim">    
+                        <div class="product product-style-3 equal-elem ">
+                            <div class="product-thumnail">
+                            <img src="{{ asset('assets/images/products') }}/{{$product->image}}" alt="{{$product->name}}"> 
+                        </div>   
                             <div class="product-info">
-                                <a class="product-name"><span>Miss Dior</span></a>
-                                <a class="description"><span>Miss Dior Eau De Parfum 50 ml</span></a>
-                                <div class="wrap-price"><span class="product-price">557.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
+                                <a class="product-name"><span>{{$product->name}}</span></a>
+                                <div class="wrap-price"><span class="product-price">${{$product->regular_price}}</span></div>
+                                <a href="#" class="btn add-to-cart" wire:cick.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" >Add To Cart</a>
                             </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/mascara.jpg') }}">    
-                            <div class="product-info">
-                                <a class="product-name"><span>Lash Paradise mascara black</span></a>
-                                <a class="description"><span>Peria specială este ideală pentru aplicare precisă, ultra catifelată și senzorială. Formulă  îmbogățită cu ulei floral. Alungește genele și accentuează privirea. Oferă un volum intens și definire genelor. Pigmenți intenși de culoare.</span></a>
-                                <div class="wrap-price"><span class="product-price">62.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/ulei.jpg') }}">    
-                            <div class="product-info">
-                                <a class="product-name"><span>Ulei pentru barbă</span></a>
-                                <a class="description"><span>Special creat pentru barba lungă. Netezește și protejează barba. Este ușor de aplicat, puneți 20-25 de picături în palmă și masați ușor pe barba umedă. Are o aromă plăcuta.</span></a>
-                                <div class="wrap-price"><span class="product-price">55.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/crema.jpg') }}">    
-                            <div class="product-info">
-                                <a class="product-name"><span>Unt cu efect reparator și absorbție rapidă Body Superfood pentru corp </span></a>
-                                <a class="description"><span>Este recomandat persoanelor cu piele foarte uscată.</span></a>
-                                <div class="wrap-price"><span class="product-price">50.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/ruj.jpg') }}">    
-                            <div class="product-info">
-                                <a class="product-name"><span>Rouge Velvet Ink ruj lichid </span></a>
-                                <a class="description"><span>Aplicare precisă. Rezistență la transfer. Textură lejeră, confortabilă. Purtare îndelungată, de până la 24 de ore 8 nuanțe intense ,super-saturate cu efect mat.</span></a>
-                                <div class="wrap-price"><span class="product-price">78.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/iluminator.jpg') }}">    
-                            <div class="product-info">
-                                <a class="product-name"><span>Miracle Glow iluminator</span></a>
-                                <a class="description"><span>Accentuează trăsăturile în mod natural. Strălucire delicată. Formulă ușoară și nelipicioasă. Pigmenț ce reflectă lumina.</span></a>
-                                <div class="wrap-price"><span class="product-price">70.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/ser.jpg') }}">    
-                            <div class="product-info">
-                                <a class="product-name"><span>Serum cu vitamina C pentru față</span></a>
-                                <a class="description"><span>Efect de strălucire, cu vitamina C, cu niacinamide, cu acid salicilic, cu extractul de lămâie.</span></a>
-                                <div class="wrap-price"><span class="product-price">46.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/yves.jpg') }}">    
-                            <div class="product-info">
-                                <a class="product-name"><span>Yves Saint Laurent Libre</span></a>
-                                <a class="description"><span>Un parfum floral, cu acorduri de lavandă. Pentru femeia puternică și sigură pe sine. Ideal pentru ocazii speciale.</span></a>
-                                <div class="wrap-price"><span class="product-price">239.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/savage.jpg') }}">    
-                            <div class="product-info">
-                                <a class="product-name"><span>Dior Savage</span></a>
-                                <a class="description"><span>Sauvage Eau de Parfum de la Christian Dior este un parfum oriental fougere pentru barbati.</span></a>
-                                <div class="wrap-price"><span class="product-price">350.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                        <div class="product product-style-3 equal-elem ">      
-                            <img src="{{ asset('assets/images/products/paleta.jpg') }}">    
-                            <div class="product-info">
-                                <a class="product-name"><span>Paleta fard pleoape</span></a>
-                                <a class="description"><span>Tipul este profesional, iar textura	de pudra compacta.</span></a>
-                                <div class="wrap-price"><span class="product-price">400.00 lei</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
-                            </div>
-                        </div>
-                    </li>
+                    @endforeach
                 </ul>
 
             </div>
