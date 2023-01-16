@@ -8,8 +8,15 @@ use Livewire\WithPagination;
 use Cart;
 use App\Models\Category;
 
-class ShopComponent extends Component
+class CategoryComponent extends Component
 {
+
+    public $category_slug;
+
+    public function mount($category_slug)
+    {
+        $this->category_slug = $category_slug;
+    }
 
     public function store($product_id,$product_name,$product_price)
     {
@@ -22,11 +29,17 @@ class ShopComponent extends Component
 
     public function render()
     {
-        $products  = Product::paginate(12);
+        $category = Category::where('slug',$this->category_slug)->first();
+
+        $category_id = $category->id;
+
+        $category_name = $category->name;
+
+        $products  = Product::where('category_id',$category_id)->paginate(20);
 
         $categories = Category::all();
 
-        return view('livewire.shop-component',['products'=>$products, 'categories'=>$categories])->layout("layouts.base");
+        return view('livewire.category-component',['products'=>$products, 'categories'=>$categories,'category_name'=>$category_name])->layout("layouts.base");
     }
 }
 

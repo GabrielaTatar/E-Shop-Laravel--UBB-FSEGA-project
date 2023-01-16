@@ -4,8 +4,9 @@
 
     <div class="wrap-breadcrumb">
         <ul>
-            <li class="item-link"><a href="#" class="link">home</a></li>
-            <li class="item-link"><span>DRUGSTORE</span></li>
+            <li class="item-link"><a href="/" class="link">home</a></li>
+            <li class="item-link"><span>Categorii</span></li>
+            <li class="item-link"><span>{{$category_name}}</span></li>
         </ul>
     </div>
     <div class="row">
@@ -14,7 +15,7 @@
 
             <div class="wrap-shop-control">
 
-                <h1 class="shop-title">DRUGSTORE</h1>
+                <h1 class="shop-title">{{$category_name}}</h1>
             </div><!--end wrap shop control-->
 
             <div class="row">
