@@ -38,6 +38,9 @@
 													<li class="menu-item" >
 														<a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
 													</li>
+													<li class="menu-item" >
+														<a title="Produse" href="{{ route('admin.products') }}">Produse</a>
+													</li>
 													<li class="menu-item">
 														<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 													</li>
@@ -79,10 +82,10 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="index.html" class="link-to-home"><img src="{{ asset('assets/images/pic-drugstore.jpg')}}" alt="mercado"></a>
+							<a href="index.html" class="link-to-home"><img src="{{ asset('assets/images/pic-drugstore.jpg')}}" alt="mercado" width="200" height="300"></a>
 						</div>
 
-						<div class="wrap-search center-section">
+						<!-- <div class="wrap-search center-section">
 							<div class="wrap-search-form">
 								<form action="#" id="form-search-top" name="form-search-top">
 									<input type="text" name="search" value="" placeholder="Search here...">
@@ -99,7 +102,7 @@
 									</div>
 								</form>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="wrap-icon right-section">
 							<div class="wrap-icon-section minicart">

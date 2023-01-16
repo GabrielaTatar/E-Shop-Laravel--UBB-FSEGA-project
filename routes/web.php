@@ -8,6 +8,8 @@ use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\CategoryComponent;
+use App\Http\Livewire\Admin\AdminProductComponent;
+use App\Http\Livewire\Admin\AdminAddProductComponent;
 
 
 /*
@@ -51,4 +53,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 //Pentru admin
 Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
     Route::get('/admin/dasboard',AdminDashboardComponent::class)->name('admin.dashboard');
+
+    Route::get('/admin/products',AdminProductComponent::class)->name('admin.products');
+
+    Route::get('/admin/product/add',AdminAddProductComponent::class)->name('admin.addproduct');
 });
