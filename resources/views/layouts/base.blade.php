@@ -35,9 +35,9 @@
 											<li class="menu-item menu-item-has-children parent" >
 												<a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 												<ul class="submenu curency" >
-													<li class="menu-item" >
+													<!-- <li class="menu-item" >
 														<a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
-													</li>
+													</li> -->
 													<li class="menu-item" >
 														<a title="Produse" href="{{ route('admin.products') }}">Produse</a>
 													</li>
@@ -54,9 +54,9 @@
 											<li class="menu-item menu-item-has-children parent" >
 												<a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 												<ul class="submenu curency" >
-													<li class="menu-item" >
+													<!-- <li class="menu-item" >
 														<a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
-													</li>
+													</li> -->
 													<li class="menu-item">
 														<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 													</li>
@@ -69,7 +69,7 @@
 										@endif
 									@else
 										<li class="menu-item" ><a title="Register or Login" href="{{route('login')}}">Login</a></li>
-										<li class="menu-item" ><a title="Register or Login" href="{{route('register')}}">Register</a></li>
+										<li class="menu-item" ><a title="Register or Login" href="{{route('register')}}">Inregistrare</a></li>
 									@endif
 
 								@endif
@@ -82,33 +82,19 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="index.html" class="link-to-home"><img src="{{ asset('assets/images/pic-drugstore.jpg')}}" alt="mercado" width="200" height="300"></a>
+							<img src="{{ asset('assets/images/pic-drugstore.jpg')}}" alt="mercado" width="200" height="300">
 						</div>
 
-						<!-- <div class="wrap-search center-section">
-							<div class="wrap-search-form">
-								<form action="#" id="form-search-top" name="form-search-top">
-									<input type="text" name="search" value="" placeholder="Search here...">
-									<button form="form-search-top" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-									<div class="wrap-list-cate">
-										<input type="hidden" name="product-cate" value="0" id="product-cate">
-										<a href="#" class="link-control">Categorii</a>
-										<ul class="list-cate">
-											<li class="level-0">Toate categoriile</li>
-											<li class="level-1">Machiaj</li>
-											<li class="level-1">Ingrijire</li>
-											<li class="level-1">Parfum</li>
-										</ul>
-									</div>
-								</form>
-							</div>
-						</div> -->
+						<div class="wrap-search center-section">
+							
+						</div>
+
 
 						<div class="wrap-icon right-section">
 							<div class="wrap-icon-section minicart">
-								<a href="#" class="link-direction">
-									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
-									<div class="left-info">
+								<a href="/cart" class="link-direction">
+									<i class="fa fa-shopping-basket" aria-hidden="true" ></i>
+									<div class="left-info"> 
 										@if(Cart::count() >= 0)
 										<span class="index">{{Cart::count()}} items</span>
 										@endif
@@ -116,12 +102,11 @@
 									</div>
 								</a>
 							</div>
-						</div>
+						</div> 
 					</div>
 				</div>
 
 				<div class="nav-section header-sticky">
-
 					<div class="primary-nav-section">
 						<div class="container">
 							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
@@ -129,10 +114,10 @@
 									<a href="/" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
 								</li>
 								<li class="menu-item">
-									<a href="/shop" class="link-term mercado-item-title">Shop</a>
+									<a href="/shop" class="link-term mercado-item-title">Magazin</a>
 								</li>
 								<li class="menu-item">
-									<a href="/cart" class="link-term mercado-item-title">Cart</a>
+									<a href="/cart" class="link-term mercado-item-title">Cos</a>
 								</li>																	
 							</ul>
 						</div>
