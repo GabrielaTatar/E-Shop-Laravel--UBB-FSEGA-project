@@ -51,12 +51,15 @@
 				</div>
 
 				<div class="summary">
+					<div class="order-summary">
+						<h4 class="title-box">Total plata</h4>
+						<p class="summary-info total-info "><span class="title">Total</span><b class="index">{{Cart::subtotal()}} lei</b></p>
+					</div>
 					<div class="checkout-info">
-						<a class="link-to-shop" href="shop.html">Continuare cumparaturi<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+						<a class="link-to-shop" href="/shop">Continuare cumparaturi<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
 					</div>
 					<div class="update-clear">
 						<a class="btn btn-clear" href="#" wire:click.prevent="destroyAll()">Golire cos cumparaturi</a>
-						<a class="btn btn-update" href="#">Refresh cos cumparaturi</a>
 					</div>
 				</div>
 

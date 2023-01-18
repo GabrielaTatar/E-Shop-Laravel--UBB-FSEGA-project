@@ -18,7 +18,7 @@
                             <div class="md-6">
                                 Toate produsele
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md">
                                 <a href="{{route('admin.addproduct')}}" class="btn btn-success pull-right">Adaugare</a>
                             </div>
                         </div>
@@ -31,13 +31,13 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Price</th>
-                                    <th>Category</th>
-                                    <th>Date</th>
-                                    <th>Action</th>
+                                    <th>Imagine</th>
+                                    <th>Nume</th>
+                                    <th>Descriere</th>
+                                    <th>Pret</th>
+                                    <th>Categorie</th>
+                                    <th>Data</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>

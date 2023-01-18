@@ -1,4 +1,3 @@
-<!--main area-->
 <main id="main" class="main-site">
 
 <div class="container">
@@ -30,25 +29,15 @@
                     
                     <div class="wrap-price"><span class="product-price">{{$product->regular_price}} lei</span></div>
                     
-                    <!-- <div class="quantity">
-                        <span>Quantity:</span>
-                        <div class="quantity-input">
-                            <input type="text" name="product-quatity" value="1" data-max="120" pattern="[0-9]*" >
-                            
-                            <a class="btn btn-reduce" href="#"></a>
-                            <a class="btn btn-increase" href="#"></a>
-                        </div>
-                    </div>
                     <div class="wrap-butons">
                         <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add to Cart</a>
-                    </div> -->
+                    </div> 
                 </div>
             </div>
-        </div><!--end main products area-->
+        </div>
 
-    </div><!--end row-->
+    </div>
 
-</div><!--end container-->
+</div>
 
 </main>
-<!--main area-->
